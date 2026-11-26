@@ -171,7 +171,7 @@ export default async function handler(req, res) {
     // reads `data.text`. Returning an object for Gemini keeps both sides
     // compatible and prevents blank response bubbles.
     if (provider === 'gemini' && task === 'chat') {
-      return sendJson(res, { text: { text } });
+      return sendJson(res, { text });
     }
     return sendJson(res, { text });
   } catch (error) {
